@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ *===================================================================
+ *
+ * Licensed Materials - Property of IBM
+ * IBM Workload Deployer (7199-72X)
+ * Copyright IBM Corporation 2009, 2011. All Rights Reserved.
+ * US Government Users Restricted Rights - Use, duplication or disclosure
+ * restricted by GSA ADP Schedule Contract with IBM Corp.
+ *
+ *===================================================================
+-->
+<xs:schema targetNamespace="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+ <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
+ <xs:element name="documentation" type="tDocumentation"/>
+ <xs:complexType name="tDocumentation" mixed="true">
+  <xs:sequence>
+   <xs:any processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+  </xs:sequence>
+  <xs:attribute name="source" type="xs:anyURI"/>
+  <xs:attribute ref="xml:lang"/>
+ </xs:complexType>
+ <xs:complexType name="tExtensibleElements">
+  <xs:sequence>
+   <xs:element ref="documentation" minOccurs="0" maxOccurs="unbounded"/>
+   <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+  </xs:sequence>
+  <xs:anyAttribute namespace="##other" processContents="lax"/>
+ </xs:complexType>
+ <xs:element name="ArchiveArtifactProperties">
+  <xs:complexType>
+   <xs:complexContent>
+    <xs:extension base="tArchiveArtifactProperties"/>
+   </xs:complexContent>
+  </xs:complexType>
+ </xs:element>
+ <xs:complexType name="tArchiveArtifactProperties">
+  <xs:complexContent>
+   <xs:extension base="tExtensibleElements">
+    <xs:sequence minOccurs="0">
+     <xs:element name="ArchiveInformation" maxOccurs="unbounded">
+      <xs:complexType>
+       <xs:attribute name="archiveReference" type="xs:anyURI" use="required"/>
+       <xs:attribute name="archiveType" type="xs:string" use="required"/>
+      </xs:complexType>
+     </xs:element>
+    </xs:sequence>
+   </xs:extension>
+  </xs:complexContent>
+ </xs:complexType>
+ <xs:element name="ArchiveArtifactContextProperties">
+  <xs:complexType>
+   <xs:complexContent>
+    <xs:extension base="tArchiveArtifactContextProperties"/>
+   </xs:complexContent>
+  </xs:complexType>
+ </xs:element>
+ <xs:complexType name="tArchiveArtifactContextProperties">
+  <xs:complexContent>
+   <xs:extension base="tExtensibleElements">
+    <xs:sequence minOccurs="0">
+     <xs:element name="ArchiveDeploymentInformation" maxOccurs="unbounded">
+      <xs:complexType>
+       <xs:attribute name="archiveReference" type="xs:anyURI" use="required"/>
+       <xs:attribute name="deploymentPath" type="xs:string" use="optional"/>
+      </xs:complexType>
+     </xs:element>
+    </xs:sequence>
+   </xs:extension>
+  </xs:complexContent>
+ </xs:complexType>
+ <xs:element name="FileArtifactContextProperties">
+  <xs:complexType>
+   <xs:complexContent>
+    <xs:extension base="tFileArtifactContextProperties"/>
+   </xs:complexContent>
+  </xs:complexType>
+ </xs:element>
+ <xs:complexType name="tFileArtifactContextProperties">
+  <xs:complexContent>
+   <xs:extension base="tExtensibleElements">
+    <xs:sequence minOccurs="0">
+     <xs:element name="FileDeploymentInformation" maxOccurs="unbounded">
+      <xs:complexType>
+       <xs:attribute name="fileReference" type="xs:anyURI" use="required"/>
+       <xs:attribute name="deploymentPath" type="xs:string" use="optional"/>
+      </xs:complexType>
+     </xs:element>
+    </xs:sequence>
+   </xs:extension>
+  </xs:complexContent>
+ </xs:complexType>
+ <xs:element name="ScriptArtifactProperties">
+  <xs:complexType>
+   <xs:complexContent>
+    <xs:extension base="tScriptArtifactProperties"/>
+   </xs:complexContent>
+  </xs:complexType>
+ </xs:element>
+ <xs:complexType name="tScriptArtifactProperties">
+  <xs:complexContent>
+   <xs:extension base="tExtensibleElements">
+    <xs:sequence>
+     <xs:element name="ScriptLanguage" type="xs:anyURI"/>
+     <xs:element name="PrimaryScript" type="xs:string"/>
+    </xs:sequence>
+   </xs:extension>
+  </xs:complexContent>
+ </xs:complexType>
+ <xs:element name="OsPackageArtifactProperties">
+  <xs:complexType>
+   <xs:complexContent>
+    <xs:extension base="tOsPackageArtifactProperties"/>
+   </xs:complexContent>
+  </xs:complexType>
+ </xs:element>
+ <xs:complexType name="tOsPackageArtifactProperties">
+  <xs:complexContent>
+   <xs:extension base="tExtensibleElements">
+    <xs:sequence minOccurs="0">
+     <xs:element name="PackageInformation" maxOccurs="unbounded">
+      <xs:complexType>
+       <xs:attribute name="packageName" type="xs:string" use="required"/>
+       <xs:attribute name="packageReference" type="xs:anyURI" use="optional"/>
+      </xs:complexType>
+     </xs:element>
+    </xs:sequence>
+    <xs:attribute name="packageType" use="required">
+     <xs:simpleType>
+      <xs:restriction base="xs:string">
+       <xs:enumeration value="rpm"/>
+       <xs:enumeration value="deb"/>
+       <xs:enumeration value="cab"/>
+      </xs:restriction>
+     </xs:simpleType>
+    </xs:attribute>
+   </xs:extension>
+  </xs:complexContent>
+ </xs:complexType>
+ <xs:element name="ChefArtifactProperties">
+  <xs:complexType>
+   <xs:complexContent>
+    <xs:extension base="tChefArtifactProperties"/>
+   </xs:complexContent>
+  </xs:complexType>
+ </xs:element>
+ <xs:complexType name="tChefArtifactProperties">
+  <xs:complexContent>
+   <xs:extension base="tExtensibleElements">
+    <xs:sequence>
+     <xs:element name="Cookbooks">
+      <xs:complexType>
+       <xs:sequence>
+        <xs:element name="Cookbook" maxOccurs="unbounded">
+         <xs:complexType>
+          <xs:attribute name="name" type="xs:string" use="required"/>
+          <xs:attribute name="location" type="xs:anyURI" use="required"/>
+         </xs:complexType>
+        </xs:element>
+       </xs:sequence>
+      </xs:complexType>
+     </xs:element>
+     <xs:element name="Roles" minOccurs="0">
+      <xs:complexType>
+       <xs:sequence>
+        <xs:element name="Role" maxOccurs="unbounded">
+         <xs:complexType>
+          <xs:attribute name="name" type="xs:string" use="required"/>
+          <xs:attribute name="location" type="xs:anyURI" use="required"/>
+         </xs:complexType>
+        </xs:element>
+       </xs:sequence>
+      </xs:complexType>
+     </xs:element>
+     <xs:element name="Mappings" minOccurs="0">
+      <xs:complexType>
+       <xs:sequence>
+        <xs:element name="PropertyMapping" type="tPropertyMapping" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="SourcePropertyMapping" type="tPropertyMapping" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="TargetPropertyMapping" type="tPropertyMapping" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="InputParameterMapping" type="tParameterMapping" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="OutputParameterMapping" type="tParameterMapping" minOccurs="0" maxOccurs="unbounded"/>
+       </xs:sequence>
+      </xs:complexType>
+     </xs:element>
+     <xs:element name="RunList">
+      <xs:complexType>
+       <xs:sequence>
+        <xs:element name="Include" minOccurs="0">
+         <xs:complexType>
+          <xs:sequence>
+           <xs:element name="RunListEntry" type="tRunListEntry" minOccurs="1" maxOccurs="unbounded"/>
+          </xs:sequence>
+         </xs:complexType>
+        </xs:element>
+        <xs:element name="Exclude" minOccurs="0">
+         <xs:complexType>
+          <xs:sequence>
+           <xs:element name="RunListEntry" type="tRunListEntry" minOccurs="1" maxOccurs="unbounded"/>
+          </xs:sequence>
+         </xs:complexType>
+        </xs:element>
+       </xs:sequence>
+      </xs:complexType>
+     </xs:element>
+    </xs:sequence>
+   </xs:extension>
+  </xs:complexContent>
+ </xs:complexType>
+ <xs:complexType name="tRunListEntry">
+  <xs:attribute name="cookbookName" type="xs:string"/>
+  <xs:attribute name="recipeName" type="xs:string"/>
+  <xs:attribute name="roleName" type="xs:string"/>
+ </xs:complexType>
+ <xs:complexType name="tParameterMapping">
+  <xs:attribute name="parameterName" type="xs:string" use="required"/>
+  <xs:attribute name="cookbookAttribute" type="xs:string" use="required"/>
+ </xs:complexType>
+ <xs:complexType name="tPropertyMapping">
+  <xs:attribute name="propertyPath" type="xs:string" use="required"/>
+  <xs:attribute name="cookbookAttribute" type="xs:string" use="required"/>
+  <xs:attribute name="mode" use="required">
+   <xs:simpleType>
+    <xs:restriction base="xs:string">
+     <xs:enumeration value="input"/>
+     <xs:enumeration value="output"/>
+     <xs:enumeration value="input-output"/>
+    </xs:restriction>
+   </xs:simpleType>
+  </xs:attribute>
+ </xs:complexType>
+</xs:schema>

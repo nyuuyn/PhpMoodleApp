@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tosca:Definitions xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:ns2="http://www.eclipse.org/winery/model/selfservice" id="winery-defs-for_ns8-PhpMoodleAppTemplate" targetNamespace="http://www.example.com/tosca/ServiceTemplates/PhpAppInvoker">
+    <tosca:Import namespace="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" location="../imports/http%253A%252F%252Fwww.w3.org%252F2001%252FXMLSchema/http%253A%252F%252Fdocs.oasis-open.org%252Ftosca%252Fns%252F2011%252F12%252FToscaBaseTypes/TOSCA-v1.0-BaseTypes/TOSCA-v1.0-BaseTypes.xsd" importType="http://www.w3.org/2001/XMLSchema"/>
+    <tosca:Import namespace="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaSpecificTypes" location="../imports/http%253A%252F%252Fwww.w3.org%252F2001%252FXMLSchema/http%253A%252F%252Fdocs.oasis-open.org%252Ftosca%252Fns%252F2011%252F12%252FToscaSpecificTypes/TOSCA-v1.0-SpecificTypes/TOSCA-v1.0-SpecificTypes.xsd" importType="http://www.w3.org/2001/XMLSchema"/>
+    <tosca:Import namespace="http://www.example.com/tosca/Types/OpenTosca" location="../imports/http%253A%252F%252Fwww.w3.org%252F2001%252FXMLSchema/http%253A%252F%252Fwww.example.com%252Ftosca%252FTypes%252FOpenTosca/openTOSCATypes/openTOSCATypes.xsd" importType="http://www.w3.org/2001/XMLSchema"/>
+    <tosca:Import namespace="http://www.example.com/MoodleWebApp" location="../imports/http%253A%252F%252Fwww.w3.org%252F2001%252FXMLSchema/http%253A%252F%252Fwww.example.com%252FMoodleWebApp/moodleAppProperties/moodleAppProperties.xsd" importType="http://www.w3.org/2001/XMLSchema"/>
+    <tosca:Import namespace="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaSpecificTypes" location="tst__MySQL.tosca" importType="http://docs.oasis-open.org/tosca/ns/2011/12"/>
+    <tosca:Import namespace="http://opentosca.org/types/declarative" location="ns85__PhpAppConnectsToMySQLDB.tosca" importType="http://docs.oasis-open.org/tosca/ns/2011/12"/>
+    <tosca:Import namespace="http://opentosca.org/types/declarative" location="ns85__OpenStack.tosca" importType="http://docs.oasis-open.org/tosca/ns/2011/12"/>
+    <tosca:Import namespace="http://www.example.com/tosca/ServiceTemplates/PhpAppInvoker" location="ns94__MoodlePhpApp.tosca" importType="http://docs.oasis-open.org/tosca/ns/2011/12"/>
+    <tosca:Import namespace="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaSpecificTypes" location="tst__ApachePHPModule.tosca" importType="http://docs.oasis-open.org/tosca/ns/2011/12"/>
+    <tosca:Import namespace="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" location="tbt__HostedOn.tosca" importType="http://docs.oasis-open.org/tosca/ns/2011/12"/>
+    <tosca:Import namespace="http://opentosca.org/types/declarative" location="ns85__Ubuntu.tosca" importType="http://docs.oasis-open.org/tosca/ns/2011/12"/>
+    <tosca:Import namespace="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" location="tbt__DependsOn.tosca" importType="http://docs.oasis-open.org/tosca/ns/2011/12"/>
+    <tosca:Import namespace="http://opentosca.org/types/declarative" location="ns85__VM.tosca" importType="http://docs.oasis-open.org/tosca/ns/2011/12"/>
+    <tosca:Import namespace="http://www.example.com/tosca/ServiceTemplates/PhpAppInvoker" location="ns94__MoodleDB.tosca" importType="http://docs.oasis-open.org/tosca/ns/2011/12"/>
+    <tosca:Import namespace="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaSpecificTypes" location="tst__ApacheWebServer.tosca" importType="http://docs.oasis-open.org/tosca/ns/2011/12"/>
+    <tosca:ServiceTemplate id="PhpMoodleAppTemplate" name="Php Moodle Template" targetNamespace="http://www.example.com/tosca/ServiceTemplates/PhpAppInvoker">
+        <tosca:BoundaryDefinitions>
+            <tosca:Properties>
+                <tosca:PropertyMappings/>
+            </tosca:Properties>
+        </tosca:BoundaryDefinitions>
+        <tosca:TopologyTemplate>
+            <tosca:NodeTemplate xmlns:ns85="http://opentosca.org/types/declarative" name="VM NodeTemplate" id="VMNode" type="ns85:VM" winery:x="298" winery:y="1479">
+                <tosca:Properties>
+                    <ns4:OpenToscaServerProps xmlns:ns4="http://www.example.com/tosca/Types/OpenTosca" xmlns="http://www.example.com/tosca/Types/OpenTosca" xmlns:ns1="http://www.eclipse.org/winery/model/selfservice" xmlns:ns2="http://opentosca.org/types/declarative" xmlns:ty="http://opentosca.org/types/declarative">
+                        <NumCpus>1</NumCpus>
+                        <Memory>1024</Memory>
+                        <ServerIP/>
+                        <InstanceId/>
+                        <instanceType>m1.small</instanceType>
+			</ns4:OpenToscaServerProps>
+                </tosca:Properties>
+            </tosca:NodeTemplate>
+            <tosca:NodeTemplate xmlns:ns85="http://opentosca.org/types/declarative" name="Ubuntu NodeTemplate" id="UbuntuNode" type="ns85:Ubuntu" winery:x="298" winery:y="1128">
+                <tosca:Properties>
+                    <ns4:OpenToscaUbuntuProps xmlns:ns4="http://www.example.com/tosca/Types/OpenTosca" xmlns="http://www.example.com/tosca/Types/OpenTosca" xmlns:ns1="http://www.eclipse.org/winery/model/selfservice" xmlns:ns2="http://opentosca.org/types/declarative" xmlns:ty="http://opentosca.org/types/declarative">
+                        <AMIid>ubuntu-13.10-server-cloudimg-amd64</AMIid>
+			</ns4:OpenToscaUbuntuProps>
+                </tosca:Properties>
+            </tosca:NodeTemplate>
+            <tosca:NodeTemplate xmlns:tst="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaSpecificTypes" name="Apache Web Server" id="ApacheWebServer" type="tst:ApacheWebServer" winery:x="140" winery:y="809">
+                <tosca:Properties>
+                    <ns3:ApacheWebServerProperties xmlns:ns3="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaSpecificTypes" xmlns="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaSpecificTypes" xmlns:ns1="http://www.eclipse.org/winery/model/selfservice" xmlns:ty="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaSpecificTypes">
+                        <ty:httpdport>80</ty:httpdport>
+			</ns3:ApacheWebServerProperties>
+                </tosca:Properties>
+            </tosca:NodeTemplate>
+            <tosca:NodeTemplate xmlns:ns94="http://www.example.com/tosca/ServiceTemplates/PhpAppInvoker" name="Hello Web App" id="HelloWebApp" type="ns94:MoodlePhpApp" winery:x="298" winery:y="75">
+                <tosca:Properties>
+                    <ns6:OpenToscaMoodleWebAppProps xmlns:ns6="http://www.example.com/MoodleWebApp" xmlns="http://www.example.com/MoodleWebApp" xmlns:ns1="http://www.eclipse.org/winery/model/selfservice" xmlns:ns5="http://www.example.com/tosca/ServiceTemplates/PhpAppInvoker" xmlns:ns87="http://www.example.com/tosca/ServiceTemplates/PhpAppInvoker" xmlns:ty="http://www.example.com/tosca/ServiceTemplates/PhpAppInvoker">
+                        <DataRoot>/moodledata</DataRoot>
+                        <AdminUser>adminUser</AdminUser>
+                        <AdminPassword>adminPassword</AdminPassword>
+			</ns6:OpenToscaMoodleWebAppProps>
+                </tosca:Properties>
+            </tosca:NodeTemplate>
+            <tosca:NodeTemplate xmlns:tst="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaSpecificTypes" name="PHP Module" id="PhpModule" type="tst:ApachePHPModule" winery:x="117" winery:y="420"/>
+            <tosca:NodeTemplate xmlns:tst="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaSpecificTypes" name="MySQL server" id="MySqlServer" type="tst:MySQL" winery:x="571" winery:y="777">
+                <tosca:Properties>
+                    <ns3:MySQLProperties xmlns:ns3="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaSpecificTypes" xmlns="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaSpecificTypes" xmlns:ns1="http://www.eclipse.org/winery/model/selfservice" xmlns:ty="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaSpecificTypes">
+                        <ty:RootPassword>mySqlRootPassword</ty:RootPassword>
+			</ns3:MySQLProperties>
+                </tosca:Properties>
+            </tosca:NodeTemplate>
+            <tosca:NodeTemplate xmlns:ns94="http://www.example.com/tosca/ServiceTemplates/PhpAppInvoker" name="MySQL DB/Table" id="MySqlDb" type="ns94:MoodleDB" winery:x="571" winery:y="426">
+                <tosca:Properties>
+                    <ns4:OpenTOSCAMySQLDBProps xmlns:ns4="http://www.example.com/tosca/Types/OpenTosca" xmlns="http://www.example.com/tosca/Types/OpenTosca" xmlns:ns1="http://www.eclipse.org/winery/model/selfservice" xmlns:ns5="http://www.example.com/tosca/ServiceTemplates/PhpAppInvoker" xmlns:ns87="http://www.example.com/tosca/ServiceTemplates/PhpAppInvoker" xmlns:ty="http://www.example.com/tosca/ServiceTemplates/PhpAppInvoker">
+                        <DBName>moodle</DBName>
+                        <DBUser>moodleuser</DBUser>
+                        <DBPassword>moodlepw</DBPassword>
+                        <DBPort>3306</DBPort>
+			</ns4:OpenTOSCAMySQLDBProps>
+                </tosca:Properties>
+            </tosca:NodeTemplate>
+            <tosca:NodeTemplate xmlns:ns85="http://opentosca.org/types/declarative" name="OpenStack" id="OpenStack" type="ns85:OpenStack" winery:x="298" winery:y="1830">
+                <tosca:Properties>
+                    <ns4:OpenToscaCloudApiProps xmlns:ns4="http://www.example.com/tosca/Types/OpenTosca" xmlns="http://www.example.com/tosca/Types/OpenTosca" xmlns:ns1="http://www.eclipse.org/winery/model/selfservice" xmlns:ns2="http://opentosca.org/types/declarative" xmlns:ty="http://opentosca.org/types/declarative">
+                        <SSHUser>ubuntu</SSHUser>
+                        <SSHPrivateKey/>
+                        <accessKey>openTOSCA.kalman</accessKey>
+                        <regionEndpoint>129.69.209.127</regionEndpoint>
+                        <secretKey/>
+                        <keyPairName>KalleKeyPair</keyPairName>
+                        <securityGroup>default</securityGroup>
+			</ns4:OpenToscaCloudApiProps>
+                </tosca:Properties>
+            </tosca:NodeTemplate>
+            <tosca:RelationshipTemplate xmlns:tbt="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="Ubuntu To Vm RelationshipTemplate" id="UbuntuToVm" type="tbt:HostedOn">
+                <tosca:SourceElement ref="UbuntuNode"/>
+                <tosca:TargetElement ref="VMNode"/>
+            </tosca:RelationshipTemplate>
+            <tosca:RelationshipTemplate xmlns:tbt="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="hosted on" id="Apache_HostedOn_OsApache" type="tbt:HostedOn">
+                <tosca:SourceElement ref="ApacheWebServer"/>
+                <tosca:TargetElement ref="UbuntuNode"/>
+            </tosca:RelationshipTemplate>
+            <tosca:RelationshipTemplate xmlns:tbt="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="hosted on" id="HelloApp_HostedOn_Apache" type="tbt:HostedOn">
+                <tosca:SourceElement ref="HelloWebApp"/>
+                <tosca:TargetElement ref="ApacheWebServer"/>
+            </tosca:RelationshipTemplate>
+            <tosca:RelationshipTemplate xmlns:tbt="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="depends on" id="HelloApp_DependsOn_PhpModule" type="tbt:DependsOn">
+                <tosca:SourceElement ref="HelloWebApp"/>
+                <tosca:TargetElement ref="PhpModule"/>
+            </tosca:RelationshipTemplate>
+            <tosca:RelationshipTemplate xmlns:tbt="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="MySQL hosted on Ubuntu" id="MySQLServerOnUbuntu" type="tbt:HostedOn">
+                <tosca:SourceElement ref="MySqlServer"/>
+                <tosca:TargetElement ref="UbuntuNode"/>
+            </tosca:RelationshipTemplate>
+            <tosca:RelationshipTemplate xmlns:tbt="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="MySQL DB/Table on MySql Server" id="MySQLDBOnMySQLServer" type="tbt:HostedOn">
+                <tosca:SourceElement ref="MySqlDb"/>
+                <tosca:TargetElement ref="MySqlServer"/>
+            </tosca:RelationshipTemplate>
+            <tosca:RelationshipTemplate xmlns:ns85="http://opentosca.org/types/declarative" name="Php Connects to MySqlDb" id="PhpAppConnectsToMySqlDB" type="ns85:PhpAppConnectsToMySQLDB">
+                <tosca:Properties>
+                    <ns4:OpenToscaPhpDbConnectionProps xmlns:ns4="http://www.example.com/tosca/Types/OpenTosca" xmlns="http://www.example.com/tosca/Types/OpenTosca" xmlns:ns1="http://www.eclipse.org/winery/model/selfservice" xmlns:ns2="http://opentosca.org/types/declarative" xmlns:ty="http://opentosca.org/types/declarative">
+                        <DBAddressPlaceHolder>YOURDBHOST</DBAddressPlaceHolder>
+                        <DBUserPlaceHolder>YOURDBUSER</DBUserPlaceHolder>
+                        <DBPasswordPlaceHolder>YOURDBPASSWORD</DBPasswordPlaceHolder>
+                        <DBNamePlaceHolder>YOURDBNAME</DBNamePlaceHolder>
+                        <ConfigFilePath>./moodle/config.php</ConfigFilePath>
+			</ns4:OpenToscaPhpDbConnectionProps>
+                </tosca:Properties>
+                <tosca:SourceElement ref="HelloWebApp"/>
+                <tosca:TargetElement ref="MySqlDb"/>
+            </tosca:RelationshipTemplate>
+            <tosca:RelationshipTemplate xmlns:tbt="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="con_144" id="con_144" type="tbt:HostedOn">
+                <tosca:SourceElement ref="VMNode"/>
+                <tosca:TargetElement ref="OpenStack"/>
+            </tosca:RelationshipTemplate>
+            <tosca:RelationshipTemplate xmlns:tbt="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="con_127" id="con_127" type="tbt:HostedOn">
+                <tosca:SourceElement ref="PhpModule"/>
+                <tosca:TargetElement ref="ApacheWebServer"/>
+            </tosca:RelationshipTemplate>
+        </tosca:TopologyTemplate>
+        <tosca:Plans/>
+    </tosca:ServiceTemplate>
+</tosca:Definitions>

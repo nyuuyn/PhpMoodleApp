@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tosca:Definitions xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:ns2="http://www.eclipse.org/winery/model/selfservice" id="winery-defs-for_tmp-Install" targetNamespace="http://tempuri.org">
+    <tosca:Import namespace="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" location="tbt__ScriptArtifact.tosca" importType="http://docs.oasis-open.org/tosca/ns/2011/12"/>
+    <tosca:ArtifactTemplate xmlns:tbt="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" id="Install" type="tbt:ScriptArtifact">
+        <tosca:ArtifactReferences>
+            <tosca:ArtifactReference reference="artifacttemplates/http%253A%252F%252Ftempuri.org/Install/files/install.sh"/>
+        </tosca:ArtifactReferences>
+    </tosca:ArtifactTemplate>
+</tosca:Definitions>

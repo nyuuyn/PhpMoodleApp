@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tosca:Definitions xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:ns2="http://www.eclipse.org/winery/model/selfservice" id="winery-defs-for_ns5-OpenStack" targetNamespace="http://opentosca.org/types/declarative">
+    <tosca:Import namespace="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" location="../imports/http%253A%252F%252Fwww.w3.org%252F2001%252FXMLSchema/http%253A%252F%252Fdocs.oasis-open.org%252Ftosca%252Fns%252F2011%252F12%252FToscaBaseTypes/TOSCA-v1.0-BaseTypes/TOSCA-v1.0-BaseTypes.xsd" importType="http://www.w3.org/2001/XMLSchema"/>
+    <tosca:Import namespace="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaSpecificTypes" location="../imports/http%253A%252F%252Fwww.w3.org%252F2001%252FXMLSchema/http%253A%252F%252Fdocs.oasis-open.org%252Ftosca%252Fns%252F2011%252F12%252FToscaSpecificTypes/TOSCA-v1.0-SpecificTypes/TOSCA-v1.0-SpecificTypes.xsd" importType="http://www.w3.org/2001/XMLSchema"/>
+    <tosca:Import namespace="http://www.example.com/tosca/Types/OpenTosca" location="../imports/http%253A%252F%252Fwww.w3.org%252F2001%252FXMLSchema/http%253A%252F%252Fwww.example.com%252Ftosca%252FTypes%252FOpenTosca/openTOSCATypes/openTOSCATypes.xsd" importType="http://www.w3.org/2001/XMLSchema"/>
+    <tosca:Import namespace="http://www.uni-stuttgart.de/opentosca" location="../imports/http%253A%252F%252Fwww.w3.org%252F2001%252FXMLSchema/http%253A%252F%252Fwww.uni-stuttgart.de%252Fopentosca/WSProperties/WSProperties.xsd" importType="http://www.w3.org/2001/XMLSchema"/>
+    <tosca:Import namespace="http://opentosca.org/types/declarative" location="ns85__OpenStackVMNodeTypeImplementation.tosca" importType="http://docs.oasis-open.org/tosca/ns/2011/12"/>
+    <tosca:Import namespace="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" location="tbt__Server.tosca" importType="http://docs.oasis-open.org/tosca/ns/2011/12"/>
+    <tosca:NodeType name="OpenStack" abstract="no" final="no" targetNamespace="http://opentosca.org/types/declarative" winery:bordercolor="#f42a3e">
+        <tosca:documentation>Basic NodeType for OpenStack</tosca:documentation>
+        <winery:PropertiesDefinition elementname="OpenToscaCloudApiProps" winery:derivedFromXSD="true" namespace="http://www.example.com/tosca/Types/OpenTosca">
+            <winery:properties>
+                <winery:key>accessKey</winery:key>
+                <winery:type>xsd:string</winery:type>
+            </winery:properties>
+            <winery:properties>
+                <winery:key>regionEndpoint</winery:key>
+                <winery:type>xsd:string</winery:type>
+            </winery:properties>
+            <winery:properties>
+                <winery:key>secretKey</winery:key>
+                <winery:type>xsd:string</winery:type>
+            </winery:properties>
+        </winery:PropertiesDefinition>
+        <tosca:DerivedFrom xmlns:tbt="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" typeRef="tbt:Server"/>
+        <tosca:PropertiesDefinition xmlns:ns84="http://www.example.com/tosca/Types/OpenTosca" element="ns84:OpenToscaCloudApiProps"/>
+    </tosca:NodeType>
+</tosca:Definitions>

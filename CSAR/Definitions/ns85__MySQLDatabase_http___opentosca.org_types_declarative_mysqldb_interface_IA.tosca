@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tosca:Definitions xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:ns2="http://www.eclipse.org/winery/model/selfservice" id="winery-defs-for_ns2-MySQLDatabase_http___opentosca.org_types_declarative_mysqldb_interface_IA" targetNamespace="http://opentosca.org/types/declarative">
+    <tosca:Import namespace="http://www.example.com/ToscaTypes" location="extt2__WAR.tosca" importType="http://docs.oasis-open.org/tosca/ns/2011/12"/>
+    <tosca:ArtifactTemplate xmlns:extt2="http://www.example.com/ToscaTypes" id="MySQLDatabase_http___opentosca.org_types_declarative_mysqldb_interface_IA" type="extt2:WAR">
+        <tosca:Properties>
+            <ns8:WSProperties xmlns:ns8="http://www.uni-stuttgart.de/opentosca" xmlns="http://www.uni-stuttgart.de/opentosca" xmlns:ns1="http://www.eclipse.org/winery/model/selfservice" xmlns:ns7="http://www.example.com/ToscaTypes">
+                <ServiceEndpoint>/services/org_opentosca_types_declarative_MySQLDatabase__org_opentosca_types_declarative_mysqldb_interfacePort</ServiceEndpoint>
+                <PortType>{http://opentosca.org/types/declarative}org_opentosca_types_declarative_MySQLDatabase__org_opentosca_types_declarative_mysqldb_interface</PortType>
+                <InvocationType>SOAP/HTTP</InvocationType>
+            </ns8:WSProperties>
+        </tosca:Properties>
+        <tosca:ArtifactReferences>
+            <tosca:ArtifactReference reference="artifacttemplates/http%253A%252F%252Fopentosca.org%252Ftypes%252Fdeclarative/MySQLDatabase_http___opentosca.org_types_declarative_mysqldb_interface_IA/files/org_opentosca_types_declarative_MySQLDatabase__org_opentosca_types_declarative_mysqldb_interface.zip"/>
+        </tosca:ArtifactReferences>
+    </tosca:ArtifactTemplate>
+</tosca:Definitions>

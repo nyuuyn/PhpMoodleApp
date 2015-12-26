@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tosca:Definitions xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:ns2="http://www.eclipse.org/winery/model/selfservice" id="winery-defs-for_ns2-MySQLDatabase_impl" targetNamespace="http://opentosca.org/types/declarative">
+    <tosca:Import namespace="http://www.example.com/ToscaTypes" location="extt2__WAR.tosca" importType="http://docs.oasis-open.org/tosca/ns/2011/12"/>
+    <tosca:Import namespace="http://opentosca.org/types/declarative" location="ns85__MySQLDatabase_http___opentosca.org_types_declarative_mysqldb_interface_IA.tosca" importType="http://docs.oasis-open.org/tosca/ns/2011/12"/>
+    <tosca:NodeTypeImplementation xmlns:ns85="http://opentosca.org/types/declarative" name="MySQLDatabase_impl" targetNamespace="http://opentosca.org/types/declarative" nodeType="ns85:MySQLDatabase">
+        <tosca:ImplementationArtifacts>
+            <tosca:ImplementationArtifact xmlns:extt2="http://www.example.com/ToscaTypes" name="MySQLDatabase_http___opentosca.org_types_declarative_mysqldb_interface_IA" interfaceName="http://opentosca.org/types/declarative/mysqldb/interface" artifactType="extt2:WAR" artifactRef="ns85:MySQLDatabase_http___opentosca.org_types_declarative_mysqldb_interface_IA"/>
+        </tosca:ImplementationArtifacts>
+    </tosca:NodeTypeImplementation>
+</tosca:Definitions>

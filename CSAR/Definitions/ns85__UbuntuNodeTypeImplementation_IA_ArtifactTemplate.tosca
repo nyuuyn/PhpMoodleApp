@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tosca:Definitions xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:ns2="http://www.eclipse.org/winery/model/selfservice" id="winery-defs-for_ns5-UbuntuNodeTypeImplementation_IA_ArtifactTemplate" targetNamespace="http://opentosca.org/types/declarative">
+    <tosca:Import namespace="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" location="../imports/http%253A%252F%252Fwww.w3.org%252F2001%252FXMLSchema/http%253A%252F%252Fdocs.oasis-open.org%252Ftosca%252Fns%252F2011%252F12%252FToscaBaseTypes/TOSCA-v1.0-BaseTypes/TOSCA-v1.0-BaseTypes.xsd" importType="http://www.w3.org/2001/XMLSchema"/>
+    <tosca:Import namespace="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaSpecificTypes" location="../imports/http%253A%252F%252Fwww.w3.org%252F2001%252FXMLSchema/http%253A%252F%252Fdocs.oasis-open.org%252Ftosca%252Fns%252F2011%252F12%252FToscaSpecificTypes/TOSCA-v1.0-SpecificTypes/TOSCA-v1.0-SpecificTypes.xsd" importType="http://www.w3.org/2001/XMLSchema"/>
+    <tosca:Import namespace="http://www.example.com/tosca/Types/OpenTosca" location="../imports/http%253A%252F%252Fwww.w3.org%252F2001%252FXMLSchema/http%253A%252F%252Fwww.example.com%252Ftosca%252FTypes%252FOpenTosca/openTOSCATypes/openTOSCATypes.xsd" importType="http://www.w3.org/2001/XMLSchema"/>
+    <tosca:Import namespace="http://www.uni-stuttgart.de/opentosca" location="../imports/http%253A%252F%252Fwww.w3.org%252F2001%252FXMLSchema/http%253A%252F%252Fwww.uni-stuttgart.de%252Fopentosca/WSProperties/WSProperties.xsd" importType="http://www.w3.org/2001/XMLSchema"/>
+    <tosca:Import namespace="http://www.example.com/ToscaTypes" location="extt2__WAR.tosca" importType="http://docs.oasis-open.org/tosca/ns/2011/12"/>
+    <tosca:ArtifactTemplate xmlns:extt2="http://www.example.com/ToscaTypes" id="UbuntuNodeTypeImplementation_IA_ArtifactTemplate" type="extt2:WAR">
+        <tosca:Properties>
+            <opentosca:WSProperties xmlns:opentosca="http://www.uni-stuttgart.de/opentosca" xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:ba="http://example.com/ba" xmlns:demo="http://www.example.com/demo" xmlns:ec2vm="http://www.example.com/tosca/ServiceTemplates/EC2VM" xmlns:ns1="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" xmlns:ns2="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaSpecificTypes" xmlns:ns3="http://www.example.com/tosca/Types/OpenTosca" xmlns:ns6="http://www.example.com/ToscaTypes" xmlns:opentoscatypes="http://www.example.com/tosca/Types/OpenTosca" xmlns:tns="http://opentosca.org/types/declarative" xmlns:toscatypes="http://www.example.com/ToscaTypes">
+                <opentosca:ServiceEndpoint>/services/org_opentosca_types_Ubuntu__InterfaceUbuntuPort</opentosca:ServiceEndpoint>
+                <opentosca:PortType>{http://types.opentosca.org/}org_opentosca_types_Ubuntu__InterfaceUbuntu</opentosca:PortType>
+                <opentosca:InvocationType>SOAP/HTTP</opentosca:InvocationType>
+			</opentosca:WSProperties>
+        </tosca:Properties>
+        <tosca:ArtifactReferences>
+            <tosca:ArtifactReference reference="artifacttemplates/http%253A%252F%252Fopentosca.org%252Ftypes%252Fdeclarative/UbuntuNodeTypeImplementation_IA_ArtifactTemplate/files/org_opentosca_types_Ubuntu__InterfaceUbuntu.war"/>
+        </tosca:ArtifactReferences>
+    </tosca:ArtifactTemplate>
+</tosca:Definitions>

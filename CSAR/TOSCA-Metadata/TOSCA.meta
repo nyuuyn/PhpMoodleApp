@@ -1,0 +1,374 @@
+TOSCA-Meta-Version: 1.0
+CSAR-Version: 1.0
+Created-By: Winery 0.1.37-SNAPSHOT
+Entry-Definitions: Definitions/ns94__PhpMoodleAppTemplate.tosca
+
+Name: Definitions/ns94__PhpMoodleAppTemplate.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tst__MySQL.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/ns85__PhpAppConnectsToMySQLDB.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/ns85__OpenStack.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/ns94__MoodlePhpApp.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tst__ApachePHPModule.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__HostedOn.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/ns85__Ubuntu.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__DependsOn.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/ns85__VM.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/ns94__MoodleDB.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tst__ApacheWebServer.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tmp__implTest.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tst__MySQLImplementation.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tst__MySQLDatabaseContainerCapability.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__DBMS.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/ns85__PhpApplication.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tst__MySQLDatabase.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__ConnectsTo.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/ns85__OpenStackVMNodeTypeImplementation.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__Server.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/ns94__MoodlePhpAppImplementaion.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tst__ApachePHPModuleImplementation.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tst__PHPRuntimeCapability.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tst__ApacheModule.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__ContainerRequirement.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__ContainerCapability.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__RootRelationshipType.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/ns85__UbuntuNodeTypeImplementation.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__OperatingSystem.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__FeatureRequirement.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__FeatureCapability.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/ns94__MoodleDBImplementaion.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/ns85__MySQLDatabase.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tst__ApacheWebServerImplementation.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tst__ApacheWebApplicationContainerCapability.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tst__ApacheModuleContainerCapability.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__HTTPEndpointCapability.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__WebServer.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tmp__Install.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__ScriptArtifact.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__OsPackageArtifact.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tst__at-MySQL-mysql-packages.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tst__at-MySQL-start.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tst__at-MySQL-stop.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tst__at-MySQL-configure.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tst__at-MySQL-install.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__DatabaseContainerCapability.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__SoftwareContainerRequirement.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__RootNodeType.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__WebApplication.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tst__MySQLDatabaseContainerRequirement.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tst__MySQLDatabaseEndpointCapability.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__Database.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__EndpointRequirement.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__EndpointCapability.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/extt2__WAR.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/ns85__OpenStackVMNodeTypeImplementation_IA_ArtifactTemplate.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/mt__AmazonEC2VMNodeTypeImplementation.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/ns30__InstallOpenStackVM_impl.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__ServerContainerRequirement.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__VolumeAttachmentRequirement.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__OperatingSystemContainerCapability.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__ArchiveArtifact.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/ns94__moodleZipPackage.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/ns94__moodleInstallSh.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tst__at-ApachePHPModule-configure.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tst__at-ApachePHPModule-start.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tst__at-ApachePHPModule-php-packages.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tst__ApacheModuleContainerRequirement.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__RootRequirementType.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__RootCapabilityType.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/ns85__UbuntuNodeTypeImplementation_IA_ArtifactTemplate.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/mt__UbuntuNodeTypeImplementation.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/extt2__LinuxRhel6_5.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__OperatingSystemContainerRequirement.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__SoftwareContainerCapability.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/ns94__MoodleDBSQLDump.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/ns94__MoodleDBShConfigure.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/ns85__MySQLDatabase_impl.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tst__at-ApacheWebServer-http-packages.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tst__at-ApacheWebServer-stop.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tst__at-ApacheWebServer-install.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tst__at-ApacheWebServer-configure.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tst__at-ApacheWebServer-start.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__WebApplicationContainerCapability.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__IPEndpointCapability.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__RootArtifactType.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__WebApplicationContainerRequirement.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__DatabaseContainerRequirement.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__DatabaseEndpointCapability.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/mt__AmazonEC2VMNodeTypeImplementation_IA_ArtifactTemplate.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__ServerContainerCapability.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/tbt__VolumeAttachmentCapability.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/mt__UbuntuNodeTypeImplementation_IA_ArtifactTemplate.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: Definitions/ns85__MySQLDatabase_http___opentosca.org_types_declarative_mysqldb_interface_IA.tosca
+Content-Type: application/vnd.oasis.tosca.definitions
+
+Name: artifacttemplates/http%3A%2F%2Fdocs.oasis-open.org%2Ftosca%2Fns%2F2011%2F12%2FToscaSpecificTypes/at-MySQL-install/files/install.sh
+Content-Type: application/x-sh
+
+Name: imports/http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema/http%3A%2F%2Fdocs.oasis-open.org%2Ftosca%2Fns%2F2011%2F12%2FToscaSpecificTypes/TOSCA-v1.0-SpecificTypes/TOSCA-v1.0-SpecificTypes.xsd
+Content-Type: text/xml
+
+Name: artifacttemplates/http%3A%2F%2Fopentosca.org%2Ftypes%2Fdeclarative/UbuntuNodeTypeImplementation_IA_ArtifactTemplate/files/org_opentosca_types_Ubuntu__InterfaceUbuntu.war
+Content-Type: application/x-tika-java-web-archive
+
+Name: artifacttemplates/http%3A%2F%2Fdocs.oasis-open.org%2Ftosca%2Fns%2F2011%2F12%2FToscaSpecificTypes/at-MySQL-configure/files/configure.sh
+Content-Type: application/x-sh
+
+Name: imports/http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema/http%3A%2F%2Fdocs.oasis-open.org%2Ftosca%2Fns%2F2011%2F12%2FToscaBaseTypes/Artifacts/Artifacts.xsd
+Content-Type: text/xml
+
+Name: imports/http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema/http%3A%2F%2Fwww.example.com%2Ftosca%2FTypes%2FOpenTosca/openTOSCATypes/openTOSCATypes.xsd
+Content-Type: text/xml
+
+Name: imports/http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema/http%3A%2F%2Fdocs.oasis-open.org%2Ftosca%2Fns%2F2011%2F12%2FToscaBaseTypes/TOSCA-v1.0-BaseTypes/TOSCA-v1.0-BaseTypes.xsd
+Content-Type: text/xml
+
+Name: artifacttemplates/http%3A%2F%2Ftempuri.org/Install/files/install.sh
+Content-Type: application/x-sh
+
+Name: artifacttemplates/http%3A%2F%2Fdocs.oasis-open.org%2Ftosca%2Fns%2F2011%2F12%2FToscaSpecificTypes/at-ApachePHPModule-configure/files/configure.sh
+Content-Type: application/x-sh
+
+Name: artifacttemplates/http%3A%2F%2Fdocs.oasis-open.org%2Ftosca%2Fns%2F2011%2F12%2FToscaSpecificTypes/at-ApacheWebServer-stop/files/stop.sh
+Content-Type: application/x-sh
+
+Name: artifacttemplates/http%3A%2F%2Fdocs.oasis-open.org%2Ftosca%2Fns%2F2011%2F12%2FToscaSpecificTypes/at-ApacheWebServer-install/files/install.sh
+Content-Type: application/x-sh
+
+Name: artifacttemplates/http%3A%2F%2Fwww.example.com%2Ftosca%2FTypes%2FMoodle/AmazonEC2VMNodeTypeImplementation_IA_ArtifactTemplate/files/org_opentosca_types_AmazonEC2VM__InterfaceAmazonEC2VM.war
+Content-Type: application/x-tika-java-web-archive
+
+Name: artifacttemplates/http%3A%2F%2Fdocs.oasis-open.org%2Ftosca%2Fns%2F2011%2F12%2FToscaSpecificTypes/at-ApacheWebServer-start/files/start.sh
+Content-Type: application/x-sh
+
+Name: artifacttemplates/http%3A%2F%2Fdocs.oasis-open.org%2Ftosca%2Fns%2F2011%2F12%2FToscaSpecificTypes/at-MySQL-stop/files/stop.sh
+Content-Type: application/x-sh
+
+Name: artifacttemplates/http%3A%2F%2Fwww.example.com%2Ftosca%2FServiceTemplates%2FPhpAppInvoker/moodleInstallSh/files/install.sh
+Content-Type: application/x-sh
+
+Name: artifacttemplates/http%3A%2F%2Fopentosca.org%2Ftypes%2Fdeclarative/OpenStackVMNodeTypeImplementation_IA_ArtifactTemplate/files/org_opentosca_types_AmazonEC2VM__InterfaceAmazonEC2VM.war
+Content-Type: application/x-tika-java-web-archive
+
+Name: artifacttemplates/http%3A%2F%2Fdocs.oasis-open.org%2Ftosca%2Fns%2F2011%2F12%2FToscaSpecificTypes/at-ApacheWebServer-configure/files/configure.sh
+Content-Type: application/x-sh
+
+Name: artifacttemplates/http%3A%2F%2Fdocs.oasis-open.org%2Ftosca%2Fns%2F2011%2F12%2FToscaSpecificTypes/at-MySQL-start/files/start.sh
+Content-Type: application/x-sh
+
+Name: imports/http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema/http%3A%2F%2Fwww.example.com%2FMoodleWebApp/moodleAppProperties/moodleAppProperties.xsd
+Content-Type: text/xml
+
+Name: imports/http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema/http%3A%2F%2Fwww.uni-stuttgart.de%2Fopentosca/WSProperties/WSProperties.xsd
+Content-Type: text/xml
+
+Name: artifacttemplates/http%3A%2F%2Fwww.example.com%2Ftosca%2FTypes%2FMoodle/UbuntuNodeTypeImplementation_IA_ArtifactTemplate/files/org_opentosca_types_Ubuntu__InterfaceUbuntu.war
+Content-Type: application/x-tika-java-web-archive
+
+Name: artifacttemplates/http%3A%2F%2Fwww.example.com%2Ftosca%2FServiceTemplates%2FPhpAppInvoker/moodleZipPackage/files/moodle-latest-28.zip
+Content-Type: application/zip
+
+Name: artifacttemplates/http%3A%2F%2Fopentosca.org%2Ftypes%2Fdeclarative/MySQLDatabase_http___opentosca.org_types_declarative_mysqldb_interface_IA/files/org_opentosca_types_declarative_MySQLDatabase__org_opentosca_types_declarative_mysqldb_interface.zip
+Content-Type: application/zip
+
+Name: artifacttemplates/http%3A%2F%2Fwww.example.com%2Ftosca%2FServiceTemplates%2FPhpAppInvoker/MoodleDBShConfigure/files/configure.sh
+Content-Type: application/x-sh
+
+Name: imports/http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema/http%3A%2F%2Fwww.example.com%2Ftosca%2FTypes%2FMoodle/MoodleTypes/MoodleTypes.xsd
+Content-Type: text/xml
+
+Name: artifacttemplates/http%3A%2F%2Fwww.example.com%2Ftosca%2FServiceTemplates%2FPhpAppInvoker/MoodleDBSQLDump/files/moodle28.sql
+Content-Type: application/x-sql
+
+Name: artifacttemplates/http%3A%2F%2Fdocs.oasis-open.org%2Ftosca%2Fns%2F2011%2F12%2FToscaSpecificTypes/at-ApachePHPModule-start/files/start.sh
+Content-Type: application/x-sh
+

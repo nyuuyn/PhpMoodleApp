@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tosca:Definitions xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:ns2="http://www.eclipse.org/winery/model/selfservice" id="winery-defs-for_ns21-MySQLImplementation" targetNamespace="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaSpecificTypes">
+    <tosca:Import namespace="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaSpecificTypes" location="../imports/http%253A%252F%252Fwww.w3.org%252F2001%252FXMLSchema/http%253A%252F%252Fdocs.oasis-open.org%252Ftosca%252Fns%252F2011%252F12%252FToscaSpecificTypes/TOSCA-v1.0-SpecificTypes/TOSCA-v1.0-SpecificTypes.xsd" importType="http://www.w3.org/2001/XMLSchema"/>
+    <tosca:Import namespace="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" location="tbt__OsPackageArtifact.tosca" importType="http://docs.oasis-open.org/tosca/ns/2011/12"/>
+    <tosca:Import namespace="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" location="tbt__ScriptArtifact.tosca" importType="http://docs.oasis-open.org/tosca/ns/2011/12"/>
+    <tosca:Import namespace="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaSpecificTypes" location="tst__at-MySQL-mysql-packages.tosca" importType="http://docs.oasis-open.org/tosca/ns/2011/12"/>
+    <tosca:Import namespace="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaSpecificTypes" location="tst__at-MySQL-start.tosca" importType="http://docs.oasis-open.org/tosca/ns/2011/12"/>
+    <tosca:Import namespace="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaSpecificTypes" location="tst__at-MySQL-stop.tosca" importType="http://docs.oasis-open.org/tosca/ns/2011/12"/>
+    <tosca:Import namespace="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaSpecificTypes" location="tst__at-MySQL-configure.tosca" importType="http://docs.oasis-open.org/tosca/ns/2011/12"/>
+    <tosca:Import namespace="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaSpecificTypes" location="tst__at-MySQL-install.tosca" importType="http://docs.oasis-open.org/tosca/ns/2011/12"/>
+    <tosca:NodeTypeImplementation xmlns:tst="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaSpecificTypes" name="MySQLImplementation" targetNamespace="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaSpecificTypes" nodeType="tst:MySQL">
+        <tosca:ImplementationArtifacts>
+            <tosca:ImplementationArtifact xmlns:tbt="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" interfaceName="http://docs.oasis-open.org/tosca/ns/2011/12/interfaces/lifecycle" operationName="install" artifactType="tbt:ScriptArtifact" artifactRef="tst:at-MySQL-install"/>
+            <tosca:ImplementationArtifact xmlns:tbt="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" interfaceName="http://docs.oasis-open.org/tosca/ns/2011/12/interfaces/lifecycle" operationName="configure" artifactType="tbt:ScriptArtifact" artifactRef="tst:at-MySQL-configure"/>
+            <tosca:ImplementationArtifact xmlns:tbt="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" interfaceName="http://docs.oasis-open.org/tosca/ns/2011/12/interfaces/lifecycle" operationName="start" artifactType="tbt:ScriptArtifact" artifactRef="tst:at-MySQL-start"/>
+            <tosca:ImplementationArtifact xmlns:tbt="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" interfaceName="http://docs.oasis-open.org/tosca/ns/2011/12/interfaces/lifecycle" operationName="stop" artifactType="tbt:ScriptArtifact" artifactRef="tst:at-MySQL-stop"/>
+        </tosca:ImplementationArtifacts>
+        <tosca:DeploymentArtifacts>
+            <tosca:DeploymentArtifact xmlns:tbt="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="mysql-packages" artifactType="tbt:OsPackageArtifact" artifactRef="tst:at-MySQL-mysql-packages"/>
+        </tosca:DeploymentArtifacts>
+    </tosca:NodeTypeImplementation>
+</tosca:Definitions>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.com/MoodleWebApp" xmlns:tns="http://www.example.com/MoodleWebApp">
+			<xs:element name="OpenToscaMoodleWebAppProps" type="tns:tMoodleWebAppProps"/>
+
+  			<xs:complexType name="tMoodleWebAppProps">
+    			<xs:sequence>
+      				<xs:element name="DataRoot" type="xs:string"/>
+      				<xs:element name="AdminUser" type="xs:string"/>
+      				<xs:element name="AdminPassword" type="xs:string"/>      
+    			</xs:sequence>
+  			</xs:complexType>
+		</xs:schema>

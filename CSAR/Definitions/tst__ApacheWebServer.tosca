@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tosca:Definitions xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:ns2="http://www.eclipse.org/winery/model/selfservice" id="winery-defs-for_ns2-ApacheWebServer" targetNamespace="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaSpecificTypes">
+    <tosca:Import namespace="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaSpecificTypes" location="../imports/http%253A%252F%252Fwww.w3.org%252F2001%252FXMLSchema/http%253A%252F%252Fdocs.oasis-open.org%252Ftosca%252Fns%252F2011%252F12%252FToscaSpecificTypes/TOSCA-v1.0-SpecificTypes/TOSCA-v1.0-SpecificTypes.xsd" importType="http://www.w3.org/2001/XMLSchema"/>
+    <tosca:Import namespace="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaSpecificTypes" location="tst__ApacheWebServerImplementation.tosca" importType="http://docs.oasis-open.org/tosca/ns/2011/12"/>
+    <tosca:Import namespace="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaSpecificTypes" location="tst__ApacheWebApplicationContainerCapability.tosca" importType="http://docs.oasis-open.org/tosca/ns/2011/12"/>
+    <tosca:Import namespace="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaSpecificTypes" location="tst__ApacheModuleContainerCapability.tosca" importType="http://docs.oasis-open.org/tosca/ns/2011/12"/>
+    <tosca:Import namespace="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" location="tbt__HTTPEndpointCapability.tosca" importType="http://docs.oasis-open.org/tosca/ns/2011/12"/>
+    <tosca:Import namespace="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" location="tbt__WebServer.tosca" importType="http://docs.oasis-open.org/tosca/ns/2011/12"/>
+    <tosca:NodeType name="ApacheWebServer" targetNamespace="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaSpecificTypes" winery:bordercolor="#9b11e9">
+        <tosca:documentation>Apache Web Server</tosca:documentation>
+        <winery:PropertiesDefinition elementname="ApacheWebServerProperties" winery:derivedFromXSD="true" namespace="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaSpecificTypes">
+            <winery:properties>
+                <winery:key>httpdport</winery:key>
+                <winery:type>xsd:int</winery:type>
+            </winery:properties>
+        </winery:PropertiesDefinition>
+        <tosca:DerivedFrom xmlns:tbt="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" typeRef="tbt:WebServer"/>
+        <tosca:PropertiesDefinition xmlns:tst="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaSpecificTypes" element="tst:ApacheWebServerProperties"/>
+        <tosca:CapabilityDefinitions>
+            <tosca:CapabilityDefinition xmlns:tst="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaSpecificTypes" name="webapps" capabilityType="tst:ApacheWebApplicationContainerCapability" lowerBound="0" upperBound="unbounded"/>
+            <tosca:CapabilityDefinition xmlns:tst="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaSpecificTypes" name="modules" capabilityType="tst:ApacheModuleContainerCapability" lowerBound="0" upperBound="unbounded"/>
+            <tosca:CapabilityDefinition xmlns:tbt="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="clients" capabilityType="tbt:HTTPEndpointCapability" lowerBound="0" upperBound="unbounded"/>
+        </tosca:CapabilityDefinitions>
+        <tosca:Interfaces>
+            <tosca:Interface name="http://docs.oasis-open.org/tosca/ns/2011/12/interfaces/lifecycle">
+                <tosca:Operation name="install"/>
+                <tosca:Operation name="configure"/>
+                <tosca:Operation name="start"/>
+                <tosca:Operation name="stop"/>
+                <tosca:Operation name="uninstall"/>
+            </tosca:Interface>
+        </tosca:Interfaces>
+    </tosca:NodeType>
+</tosca:Definitions>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tosca:Definitions xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:ns2="http://www.eclipse.org/winery/model/selfservice" id="winery-defs-for_ns2-LinuxRhel6_5" targetNamespace="http://www.example.com/ToscaTypes">
+    <tosca:NodeTypeImplementation xmlns:tbt="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="LinuxRhel6_5" targetNamespace="http://www.example.com/ToscaTypes" nodeType="tbt:OperatingSystem"/>
+</tosca:Definitions>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tosca:Definitions xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:ns2="http://www.eclipse.org/winery/model/selfservice" id="winery-defs-for_tmp-implTest" targetNamespace="http://tempuri.org">
+    <tosca:Import namespace="http://tempuri.org" location="tmp__Install.tosca" importType="http://docs.oasis-open.org/tosca/ns/2011/12"/>
+    <tosca:Import namespace="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" location="tbt__ScriptArtifact.tosca" importType="http://docs.oasis-open.org/tosca/ns/2011/12"/>
+    <tosca:NodeTypeImplementation xmlns:tst="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaSpecificTypes" name="implTest" targetNamespace="http://tempuri.org" nodeType="tst:MySQL">
+        <tosca:ImplementationArtifacts>
+            <tosca:ImplementationArtifact xmlns:tbt="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" xmlns:tmp="http://tempuri.org" name="Install" interfaceName="test" operationName="custInstall" artifactType="tbt:ScriptArtifact" artifactRef="tmp:Install"/>
+        </tosca:ImplementationArtifacts>
+    </tosca:NodeTypeImplementation>
+</tosca:Definitions>
